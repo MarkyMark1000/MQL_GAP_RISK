@@ -24,7 +24,8 @@ void OnStart()
    
    Because TICKVALUE is prone to change when the profit currency is not
    equal to the account currency, then the calculation will have some
-   level of inaccuracy under these circumstances.
+   level of inaccuracy under these circumstances, but may be considered
+   a reasonable approximation.
    
    */
    
