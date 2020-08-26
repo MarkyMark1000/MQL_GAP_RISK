@@ -14,18 +14,17 @@ void OnStart()
   {
    /*
    
-   It is not possible to get the exact GAP risk from historic candlestick
-   data as you would need every tick.   It is possible to get a feel for
-   the GAP risk by analysing the following:
-   i) The maximum [ Open(t) - Close(t-1) ] / Close(t-1)
-   ii) The maximum [ High(t) - Low(t) ] / Mid(t)
-      (ie a worst case gap event of high to low or low to high)
+   This script displays some useful information when considering the
+   GAP risk of a particular symbol.
+   The mid of the spot is calculated and then the TICKSIZE and TICKVALUE
+   are used to calculate the potential loss from a 10%, 20%, etc GAP.
    
-   This script scans through the candles on the active chart and records
-   the maximum (high-low)/mid and maximum (open-close)/open
+   These results are then displayed along with some other useful
+   information such as the account currency.
    
-   Run this on the smallest timeframe available for the desired index/stock
-   etc.
+   Because TICKVALUE is prone to change when the profit currency is not
+   equal to the account currency, then the calculation will have some
+   level of inaccuracy under these circumstances.
    
    */
    
